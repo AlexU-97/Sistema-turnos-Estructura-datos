@@ -117,6 +117,12 @@ http://localhost:8080
 
 ---
 
-## Autor
+## Integrantes
 
-Proyecto académico desarrollado para la asignatura Estructura de Datos.
+- Alex Uribe
+- Daniel Pareja Montero 
+- Isabella Salas Jara
+
+## Asignatura
+
+Estructura de datos 
