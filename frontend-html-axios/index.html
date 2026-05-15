@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Turnos</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Sistema de Turnos</h1>
+
+        <!-- ========================= -->
+        <!-- PERSONAS -->
+        <!-- ========================= -->
+
+        <div class="formulario">
+
+            <h2>Registrar Persona</h2>
+
+            <input type="text" id="nombre" placeholder="Nombre">
+
+            <input type="email" id="correo" placeholder="Correo">
+
+            <input type="text" id="documento" placeholder="Número Documento">
+
+            <button onclick="guardarPersona()">
+                Guardar Persona
+            </button>
+
+        </div>
+
+        <div class="lista">
+
+            <h2>Lista de Personas</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Documento</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaPersonas">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- CATEGORIAS -->
+        <!-- ========================= -->
+
+        <div class="formulario">
+
+            <h2>Registrar Categoría</h2>
+
+            <input type="text" id="nombreCategoria" placeholder="Nombre Categoría">
+
+            <input type="text" id="descripcionCategoria" placeholder="Descripción">
+
+            <button onclick="guardarCategoria()">
+                Guardar Categoría
+            </button>
+
+        </div>
+
+        <div class="lista">
+
+            <h2>Lista de Categorías</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaCategorias">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- TURNOS -->
+        <!-- ========================= -->
+
+        <div class="formulario">
+
+            <h2>Registrar Turno</h2>
+
+            <select id="personaTurno">
+
+            </select>
+
+            <select id="categoriaTurno">
+
+            </select>
+
+            <select id="estadoTurno">
+
+                <option value="reservado">Reservado</option>
+                <option value="en espera">En espera</option>
+                <option value="atendido">Atendido</option>
+                <option value="cancelado">Cancelado</option>
+
+            </select>
+
+            <button onclick="guardarTurno()">
+                Guardar Turno
+            </button>
+
+        </div>
+
+        <div class="lista">
+
+            <h2>Lista de Turnos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Persona</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaTurnos">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
